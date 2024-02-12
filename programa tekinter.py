@@ -50,7 +50,11 @@ def ventanaAgregar():
     nuevoproducto1.place(x=450,y=350)
     boton31.place(x=450,y=390)
 
+    atras = Button(ventanaAgregar,text=" atras", command=darParaAtras).place(x=120,y=20)
 
+def darParaAtras():
+    root.deiconify()
+    ventanaAgregar.withdraw() 
 
 
 
