@@ -1,6 +1,7 @@
 from tkinter import*
 from pro import *
 import sys
+from tkinter import messagebox
 root = Tk()
 root.title("UNAPEC")#primer titulo de gestor de cafeterias 
 root.geometry("1000x650")# tamano de pantalla
@@ -12,7 +13,9 @@ texto.place(x=390, y=10)
 def salir():
     sys.exit()
 def cerrar():
-    menssageBox = asuestion("cerrar" , Message("estas segoro?"))
+    confirmacion = messagebox.askquestion("Cerrar", "¿Estás seguro?", icon="warning")
+    if confirmacion == "yes":
+        root.destroy()
 #def agregar():
     #listaProductos1.insert(END,nuevoproducto.get())
 def ventanaAgregar():
@@ -50,11 +53,14 @@ def ventanaAgregar():
     nuevoproducto1.place(x=450,y=350)
     boton31.place(x=450,y=390)
 
-    atras = Button(ventanaAgregar,text=" atras", command=darParaAtras).place(x=120,y=20)
+    atras = Button(ventanaAgregar,text=" atras", command=darParaAtras).place(x=900,y=20)
 
 def darParaAtras():
     root.deiconify()
-    ventanaAgregar.withdraw() 
+    ventanaAgregar.iconify() 
+    ventanaAgregar.withdraw()
+
+
 
 
 
@@ -70,7 +76,7 @@ campus.place(x=20, y=80)
 
 salir = Button(root, text= "Salir del programa", command=cerrar)
 #salir = Button(root, text= "Salir del programa", command=root.quit)
-salir = Button(root, text= "Salir del programa", command=root.quit)
+#salir = Button(root, text= "Salir del programa", command=root.quit)
 salir.place(x=450, y=550)
 
 #Menu
@@ -87,6 +93,9 @@ sucursalesMenu.add_command(label="agregar sucursal")
 sucursalesMenu.add_command(label="exportar importar")
 menuban.add_cascade(label="Archivo", menu=archivoMenu)
 menuban.add_cascade(label="Sucursal", menu=sucursalesMenu)
+
+#dar para atras ventana
+atras = Button(root,text=" atras", command=darParaAtras).place(x=900,y=20)
 
 #Productos
 
