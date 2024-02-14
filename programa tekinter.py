@@ -18,6 +18,9 @@ def cerrar():
         root.destroy()
 #def agregar():
     #listaProductos1.insert(END,nuevoproducto.get())
+def darParaAtras():
+    root.deiconify()
+    ventanaAgregar.iconify() 
 def ventanaAgregar():
     ventanaAgregar = Toplevel()
     root.withdraw()
@@ -54,16 +57,6 @@ def ventanaAgregar():
     boton31.place(x=450,y=390)
 
     atras = Button(ventanaAgregar,text=" atras", command=darParaAtras).place(x=900,y=20)
-
-def darParaAtras():
-    root.deiconify()
-    ventanaAgregar.iconify() 
-    ventanaAgregar.withdraw()
-
-
-
-
-
 
 
 #texto.grid(row=0 , column=1)
