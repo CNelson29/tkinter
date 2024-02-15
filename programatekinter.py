@@ -56,8 +56,8 @@ def ventanaAgregar():
     boton31.place(x=455,y=390)
 
     #Menu
-    menuban = Menu(root)
-    root.config(menu=menuban)
+    menuban = Menu(ventanaAgregar)
+    ventanaAgregar.config(menu=menuban)
     archivoMenu = Menu(menuban)
     archivoMenu.add_command(label="ver productos", command=ventanaVer)
     archivoMenu.add_command(label="agregar productos",command=ventanaAgregar)
@@ -100,8 +100,8 @@ def ventanaVer():
     #insertar nuevo producto
 
 #Menu
-    menuban = Menu(root)
-    root.config(menu=menuban)
+    menuban = Menu(ventanaVer)
+    ventanaVer.config(menu=menuban)
     archivoMenu = Menu(menuban)
     archivoMenu.add_command(label="ver productos", command=ventanaVer)
     archivoMenu.add_command(label="agregar productos",command=ventanaAgregar)
@@ -146,8 +146,8 @@ def ventanaSucursal():
     #listaProductos.delete()
     #insertar nuevo producto
     #Menu
-    menuban = Menu(root)
-    root.config(menu=menuban)
+    menuban = Menu(ventanaSucursal)
+    ventanaSucursal.config(menu=menuban)
     archivoMenu = Menu(menuban)
     archivoMenu.add_command(label="ver productos", command=ventanaVer)
     archivoMenu.add_command(label="agregar productos",command=ventanaAgregar)
@@ -201,8 +201,8 @@ def sucursalAgregar():
     boton31.place(x=455,y=390)
 
     #Menu
-    menuban = Menu(root)
-    root.config(menu=menuban)
+    menuban = Menu(sucursalAgregar)
+    sucursalAgregar.config(menu=menuban)
     archivoMenu = Menu(menuban)
     archivoMenu.add_command(label="ver productos", command=ventanaVer)
     archivoMenu.add_command(label="agregar productos",command=ventanaAgregar)
