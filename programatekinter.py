@@ -55,6 +55,21 @@ def ventanaAgregar():
     boton31 = Button(ventanaAgregar, text="agregar producto", command=agregar)
     boton31.place(x=455,y=390)
 
+    #Menu
+    menuban = Menu(root)
+    root.config(menu=menuban)
+    archivoMenu = Menu(menuban)
+    archivoMenu.add_command(label="ver productos", command=ventanaVer)
+    archivoMenu.add_command(label="agregar productos",command=ventanaAgregar)
+    archivoMenu.add_command(label="Exportar e importar")
+    #sucursales
+    sucursalesMenu = Menu(menuban)
+    sucursalesMenu.add_command(label="sucursales",command=ventanaSucursal)
+    sucursalesMenu.add_command(label="agregar sucursal",command=sucursalAgregar)
+    sucursalesMenu.add_command(label="exportar importar")
+    menuban.add_cascade(label="Archivo", menu=archivoMenu)
+    menuban.add_cascade(label="Sucursal", menu=sucursalesMenu)
+
     atras = Button(ventanaAgregar,text=" atras", command=darParaAtras).place(x=900,y=20)
 def ventanaVer():
     ventanaVer = Toplevel()
@@ -83,6 +98,22 @@ def ventanaVer():
     #eliminar productos - posibilidad
     #listaProductos.delete()
     #insertar nuevo producto
+
+#Menu
+    menuban = Menu(root)
+    root.config(menu=menuban)
+    archivoMenu = Menu(menuban)
+    archivoMenu.add_command(label="ver productos", command=ventanaVer)
+    archivoMenu.add_command(label="agregar productos",command=ventanaAgregar)
+    archivoMenu.add_command(label="Exportar e importar")
+    #sucursales
+    sucursalesMenu = Menu(menuban)
+    sucursalesMenu.add_command(label="sucursales",command=ventanaSucursal)
+    sucursalesMenu.add_command(label="agregar sucursal",command=sucursalAgregar)
+    sucursalesMenu.add_command(label="exportar importar")
+    menuban.add_cascade(label="Archivo", menu=archivoMenu)
+    menuban.add_cascade(label="Sucursal", menu=sucursalesMenu)
+
     atras = Button(ventanaVer,text=" atras", command=darParaAtras).place(x=900,y=20)
 def ventanaSucursal():
     ventanaSucursal = Toplevel()
@@ -114,6 +145,22 @@ def ventanaSucursal():
     #eliminar productos - posibilidad
     #listaProductos.delete()
     #insertar nuevo producto
+    #Menu
+    menuban = Menu(root)
+    root.config(menu=menuban)
+    archivoMenu = Menu(menuban)
+    archivoMenu.add_command(label="ver productos", command=ventanaVer)
+    archivoMenu.add_command(label="agregar productos",command=ventanaAgregar)
+    archivoMenu.add_command(label="Exportar e importar")
+    #sucursales
+    sucursalesMenu = Menu(menuban)
+    sucursalesMenu.add_command(label="sucursales",command=ventanaSucursal)
+    sucursalesMenu.add_command(label="agregar sucursal",command=sucursalAgregar)
+    sucursalesMenu.add_command(label="exportar importar")
+    menuban.add_cascade(label="Archivo", menu=archivoMenu)
+    menuban.add_cascade(label="Sucursal", menu=sucursalesMenu)
+
+
     atras = Button(ventanaSucursal,text=" atras", command=darParaAtras).place(x=900,y=20)
 def sucursalAgregar():
     sucursalAgregar = Toplevel()
@@ -152,6 +199,21 @@ def sucursalAgregar():
     nuevoproducto1.place(x=435,y=350)
     boton31 = Button(sucursalAgregar, text="Agregar Sucursal", command=agregar)
     boton31.place(x=455,y=390)
+
+    #Menu
+    menuban = Menu(root)
+    root.config(menu=menuban)
+    archivoMenu = Menu(menuban)
+    archivoMenu.add_command(label="ver productos", command=ventanaVer)
+    archivoMenu.add_command(label="agregar productos",command=ventanaAgregar)
+    archivoMenu.add_command(label="Exportar e importar")
+    #sucursales
+    sucursalesMenu = Menu(menuban)
+    sucursalesMenu.add_command(label="sucursales",command=ventanaSucursal)
+    sucursalesMenu.add_command(label="agregar sucursal",command=sucursalAgregar)
+    sucursalesMenu.add_command(label="exportar importar")
+    menuban.add_cascade(label="Archivo", menu=archivoMenu)
+    menuban.add_cascade(label="Sucursal", menu=sucursalesMenu)
 
     atras = Button(sucursalAgregar,text=" Atras", command=darParaAtras).place(x=900,y=20)
 
