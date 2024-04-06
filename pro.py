@@ -1,9 +1,10 @@
 from tkinter import*
 import sys
+
 #configuraciones
 root = Tk()
 root.title("Registro unapec")
-root.iconbitmap("icon unapec.ico")
+root.iconbitmap("img/icon unapec.ico")
 root.geometry("1000x650")
 root.resizable(0,0)
 #defs
